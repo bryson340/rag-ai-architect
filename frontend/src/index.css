@@ -1,0 +1,115 @@
+:root {
+  --primary-color: #646cff;
+  --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --text-color: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(20, 20, 30, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  background: -webkit-linear-gradient(45deg, #00d2ff, #3a7bd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.upload-section {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px dashed #3a7bd5;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: transform 0.2s;
+}
+
+.upload-section:hover {
+  transform: scale(1.02);
+  border-color: #00d2ff;
+}
+
+.chat-box {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 200px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: background 0.3s;
+}
+
+input[type="text"]:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+button {
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 16px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+}
+
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.answer-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.8;
+  white-space: pre-wrap; /* This preserves the bullet points! */
+  border-left: 4px solid #00d2ff;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
