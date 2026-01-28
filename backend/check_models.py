@@ -2,20 +2,25 @@ import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 
-# Load your key
 load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")
 
+api_key = os.getenv("GOOGLE_API_KEY")
 if not api_key:
-    print("❌ Error: API Key not found!")
+    print("❌ Error: GOOGLE_API_KEY not found in .env")
 else:
     genai.configure(api_key=api_key)
+    print(f"✅ Key found: {api_key[:5]}...*****")
+    print("\n🔍 Scanning for available Chat Models...")
     
-    print("Checking available models for your API key...\n")
     try:
-        # List all models that support generating text
+        found = False
         for m in genai.list_models():
             if 'generateContent' in m.supported_generation_methods:
-                print(f"✅ Found: {m.name}")
+                print(f"   - {m.name}")
+                found = True
+        
+        if not found:
+            print("\n❌ No Chat Models found. Your API Key might only have access to Embeddings?")
+            print("   Try creating a new API Key at: https://aistudio.google.com/")
     except Exception as e:
-        print(f"❌ Error listing models: {e}")
+        print(f"\n❌ Error contacting Google: {e}")

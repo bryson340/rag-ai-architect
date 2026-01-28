@@ -1,23 +1,16 @@
-# 🧠 RAG AI Architect
+# React + Vite
 
-**RAG Architect** is an enterprise-grade document intelligence platform that allows users to chat with their PDF documents using AI. It features a split-screen workspace, multi-document memory, and smart citation linking.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![App Screenshot](frontend/public/screenshot.png) *(Optional: Add a screenshot here)*
+Currently, two official plugins are available:
 
-## 🚀 Key Features
-- **RAG (Retrieval-Augmented Generation):** accurate answers grounded in your data.
-- **Multi-Document Knowledge Base:** Upload and analyze multiple PDFs simultaneously.
-- **Split-Screen Evidence:** Click a citation to instantly view the source page in the PDF viewer.
-- **Enterprise Security:** JWT-based Authentication and Session Management.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🛠️ Tech Stack
-- **Frontend:** React.js, Vite, Axios
-- **Backend:** Python, FastAPI, SQLAlchemy
-- **AI/ML:** Google Gemini Pro, LangChain, Pinecone Vector DB
-- **Database:** SQLite (Relational), Pinecone (Vector)
+## React Compiler
 
-## 📦 Installation
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-1. Clone the repo:
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/rag-ai-architect.git](https://github.com/YOUR_USERNAME/rag-ai-architect.git)
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
